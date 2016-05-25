@@ -1,0 +1,57 @@
+import dogs
+from string import *
+
+def display(s):
+	'''Display inputed message'''
+	print (s)
+display(display.__doc__) #Vivedet documentaciy po funkcii
+display(r'C:\Program files') #Neophodim dlya vivoda \
+display('\nHello'+'Python') #Konactenaciya strok
+display('Python in easy steps'[0:7])
+display('p' in 'Python') #registr imeet znachenie, etot budet false
+display('P' in 'Python')
+
+
+arr=dir(dogs)
+print(arr)
+
+snuck='{} and {}'.format('Burger','Cola')
+print (snuck)
+
+#Teper sdelaem naoborot
+snuck='{1} and {0}'.format('Burger','Cola')
+print (snuck)
+
+#Mogno vivodit tak
+snuck='%s and %s'%('Yaroslav','Ella')
+print(snuck)
+
+str='python in easy steps'
+
+list=['Apple','Orange','Book']
+print ('String capitalized :',str.capitalize())
+print ('String upper :',str.upper())
+print ('String titled :',str.title())
+print ('String centered :',str.center(30,'*'))
+print ('String join:',str.join('**'))
+print ('String rjust :',str.rjust(50,'c'))
+print ('Python replaced by PHP',str.replace('python','PHP'))
+
+#Unicode
+s='Rdd'
+print('Rdd string',s)
+print('The type is:',type(s),'len is ',len(s))
+
+s=s.encode('utf-8')
+print('Encoded string',s)
+print('The type is:',type(s),'len is ',len(s))
+
+s=s.decode('utf-8')
+print('Decoded string',s)
+print('The type is:',type(s),'len is ',len(s))
+
+s=b'Gr\xc3\xb6n'
+print('Green string',s.decode('utf-8'))
+
+#s='Gr\N(LATIN LETTER)n'
+print('Green string',s)
