@@ -1,0 +1,13 @@
+
+c = template.Context({'person_name’: 'Джон Смит’,
+'company’: 'Outdoor Equipment’,
+'ship_date’: datetime.date(2009, 4, 2),
+'ordered_warranty’: False})
+
+следующем примере:
+t = Template(“Меня зовут {{ person.first_name }}.”)
+class PersonClass3:
+    def first_name(self):
+        raise AssertionError(foo)
+p = PersonClass3()
+t.render(Context({“person”: p}))

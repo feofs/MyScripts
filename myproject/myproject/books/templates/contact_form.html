@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Свяжитесь с нами</title>
+</head>
+<body>
+<h1>Свяжитесь с нами</h1>
+
+{% if errors %}
+    <ul>
+    {% for error in errors %}
+        <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<!-- Тут мы определили три поля subject, email, message -->
+<form action='/contact/' method='post'>
+<p>Тема: <input type='text' name='subject' value="{{subject}}"></p>
+<p>Ваш e-mail (необязательно): <input type='text' name='email' value="{{email}}"></p>
+<p>Сообщение:
+<textarea name='message' rows='10' cols='50'>{{message}}</textarea>
+</p>
+<input type='submit' value='Отправить'>
+</form>
+</body>
+</html>

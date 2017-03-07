@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<h1>My first django site</h1>
+{% block content %}{% endblock %}
+
+{% block footer %}
+<!-- вот сначал выполниться все что в тегах а наши добавки пойдут в конец-->
+<hr>
+<p>Спасибо, что посетили мой сайт.</p>
+{% endblock %}
+
+</body>
+</html>

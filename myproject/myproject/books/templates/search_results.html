@@ -1,0 +1,10 @@
+{% extends 'skillet.html' %}
+{% block title %} Запрос книги {{query}}{% endblock %}
+{% block content %}
+<table border="1">
+<tr><td>Номер</td><td>Имя</td><td>Фамилия</td><td>Email</td></tr>
+{% for book in books %}
+<tr><td>{{forloop.counter}}</td><td>{{book.title}}</td><td>{{book.authors}}</td><td>{{book.publisher}}</td></tr>
+</table>
+{% endfor %}
+{% endblock %}
